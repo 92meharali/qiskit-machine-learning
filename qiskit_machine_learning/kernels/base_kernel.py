@@ -48,7 +48,7 @@ class BaseKernel(ABC):
         Args:
             feature_map: Parameterized circuit to be used as the feature map. This is required: if
                 ``None`` is given, a :class:`~QiskitMachineLearningError` is raised. The number of
-                features in the input data must match the number of qubits in the feature map.
+                features in the input data must match the number of parameters in the feature map.
             enforce_psd: Project to the closest positive semidefinite matrix if ``x = y``.
                 Default ``True``.
         """

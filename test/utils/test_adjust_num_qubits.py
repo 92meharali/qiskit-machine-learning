@@ -48,7 +48,16 @@ class TestDeriveNumQubits(QiskitMachineLearningTestCase):
             self.properties["ra2"],
         )
 
-    @idata([(None, "z1"), (None, "z2"), ("z1", None), ("z1", "ra1"), ("z2", None), ("z2", "ra2")])
+    @idata(
+        [
+            (None, "ra1"),
+            (None, "ra2"),
+            ("z1", None),
+            ("z1", "ra1"),
+            ("z2", None),
+            ("z2", "ra2"),
+        ]
+    )
     @unpack
     def test_derive_from_circuits(self, feature_map, ansatz):
         """Test deriving defaults when one or both circuits are provided."""
